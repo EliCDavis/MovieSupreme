@@ -41,15 +41,11 @@ function Movie() {
 
     window.movieCallback = _onDataReceived;
     
-
     self.search = function (query) {
-
-        //xhr.open("GET", "https://api.themoviedb.org/search/movie?query="+query+"&api_key=9d3c8941bb5a7d5abef3326b3cd2cab8");
-
         var script = document.createElement('script');
-        script.src = 'https://api.themoviedb.org/3/movie/now_playing?api_key=9d3c8941bb5a7d5abef3326b3cd2cab8&callback=MovieCallback'
+        script.src = 'https://api.themoviedb.org/3/search/movie?api_key=9d3c8941bb5a7d5abef3326b3cd2cab8&callback=MovieCallback&query='+query;
         document.getElementsByTagName('head')[0].appendChild(script);
-
+        self.lastRequest$.onNext(" - Search for: "+query);
     }
 
 
@@ -73,5 +69,7 @@ function Movie() {
         document.getElementsByTagName('head')[0].appendChild(script);
         self.lastRequest$.onNext(" - Top Rated");
     }
+
+    self.nowPlaying();
 
 }

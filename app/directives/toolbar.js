@@ -39,8 +39,12 @@ function Search(){
             self.topRated = Movie.topRated;
 
             self.lastRequest$ = Movie.lastRequest$;
+
+            self.movieToSearch = "";
+            self.search = function(){
+                Movie.search(self.movieToSearch);
+            }
             
-            //Movie.nowPlaying();
         }
     };
     

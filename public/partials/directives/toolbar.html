@@ -1,4 +1,4 @@
-<md-toolbar>
+<md-toolbar class="md-hue-2">
 	<div class="md-toolbar-tools">
 		<md-button class="md-fab md-mini" aria-label="Favorite">
 			<md-icon onclick="window.location='https://github.com/EliCDavis'" md-svg-icon="img/icons/octo.svg"></md-icon>
@@ -6,7 +6,19 @@
 		<h1>
 			Movie Supreme<span ng-bind="toolbar.lastRequest$"></span>
 		</h1>
-		<span flex></span>
+		<span flex layout="row">
+
+			<md-input-container class="md-block" flex-gt-sm style="margin-left:20px; margin-top:0px; margin-bottom:0px;" flex>
+            	<label style="color:white;">Search for a Movie...</label>
+				<input ng-model="toolbar.movieToSearch" style="color:white">
+			</md-input-container>
+
+			<md-button ng-click="toolbar.search()" aria-label="Search" class="md-raised md-primary" style="margin-left:0px;">
+				Search <md-icon onclick="window.location='https://github.com/EliCDavis/MovieSupreme'" md-svg-icon="img/icons/search.svg"></md-icon>
+			</md-button>
+
+		</span>
+		
 		<div>
 			<md-button ng-click="toolbar.topRated()" class="md-raised" aria-label="Learn More">
 				Top Rated
