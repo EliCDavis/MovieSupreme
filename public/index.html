@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie Supreme</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <script>
+            function MovieCallback(data){
+                window.movieCallback(data);
+            }
+        </script>
+        <style>
+        </style>
+    </head>
+    <body  layout="column">
+
+        <ms-toolbar></ms-toolbar>
+<!--
+        <ms-search flex></ms-search>
+-->
+        <ms-movie-listing flex style="overflow:auto;"></ms-movie-listing>
+        
+        <script src="main.js"></script>
+    </body>
+</html>

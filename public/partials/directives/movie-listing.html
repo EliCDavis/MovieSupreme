@@ -1,0 +1,23 @@
+<div flex layout="row" layout-wrap>
+	<div layout="column" ng-repeat="movie in movieListing.movies" flex="33" style="height:150px; ">
+
+		<div flex md-whiteframe="3" style="margin:10px" layout="row">
+
+			<img style="" flex="nogrow" ng-show="movie.backdrop_path !== null" ng-src="{{'https://image.tmdb.org/t/p/w500'+movie.backdrop_path}}" height="100%">
+
+			<div layout="column" flex>
+
+				<div layout-margin>
+					<h3 ng-bind="movie.original_title"></h3>
+					<p>
+						<span ng-bind="movie.release_date"></span>
+						<br/> Rating: <span ng-bind="movie.vote_average"></span> / 10.0
+					</p>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</div>
