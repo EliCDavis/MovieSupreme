@@ -1,12 +1,10 @@
 {
-  "name": "movie supreme",
+  "name": "moviesupreme",
   "description": "Display your favorite movies.",
   "version": "1.0.0",
   "keywords": [
     "browser",
-    "github",
-    "graph",
-    "node"
+    "movie"
   ],
   "author": "Eli Davis",
   "license": "MIT",
